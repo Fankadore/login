@@ -1,0 +1,83 @@
+$activeColour: #eee;
+$inactiveColour: #aaa;
+
+.auth-form {
+	width: 500px;
+	margin: 4rem auto auto;
+	color: #fff;
+	
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+	"sign-in	sign-up"
+	"fields		fields";
+	
+	&__tab {
+		background-color: $inactiveColour;
+		border-radius: 25px 25px 0 0;
+		border: none;
+		font-size: 2rem;
+		padding: 0.5rem;
+		outline: none;
+		
+		&--active {
+			background-color: $activeColour;
+		}
+
+		&--sign-in {
+			grid-area: sign-in;
+		}
+		
+		&--sign-up {
+			grid-area: sign-up;
+		}
+	}
+	
+	&__fields {
+		grid-area: fields;
+		background-image: linear-gradient($activeColour, #555);
+		border-radius: 0 0 25px 25px;
+		padding: 1rem;
+
+		display: grid;
+		grid-template-areas:
+		"username"
+		"password"
+		"email"
+		"submit";
+	}
+
+	&__input {
+		margin: 0.5rem auto;
+		font-size: large;
+		font-weight: bold;
+		background: none;
+		border: none;
+		border-bottom: 3px solid #000;
+		outline: none;
+		text-align: center;
+	}
+
+	&__username {
+		grid-area: username;
+	}
+	
+	&__password {
+		grid-area: password;
+	}
+	
+	&__email {
+		grid-area: email;
+	}
+	
+	&__submit {
+		grid-area: submit;
+		margin: 1rem auto auto;
+		padding: 0.5rem 1rem;
+		font-size: x-large;
+		font-weight: bold;
+		background-color: #ccc;
+		background-image: linear-gradient(#ccc, #888);
+		outline: none;
+	}
+}

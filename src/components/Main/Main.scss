@@ -1,0 +1,14 @@
+.main {
+	background-color: #000;
+	
+	display: grid;
+	grid-template-rows: 1rem 1fr auto;
+	grid-template-areas:
+	"."
+	"form"
+	".";
+}
+
+.auth-form {
+	grid-area: form;
+}
